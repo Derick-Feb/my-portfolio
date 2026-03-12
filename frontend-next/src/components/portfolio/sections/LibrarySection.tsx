@@ -75,19 +75,19 @@ const ProjectModal = ({ project, onClose }: { project: Project; onClose: () => v
         style={{ padding: '0', overflow: 'hidden' }}
       >
         {/* Modal Header */}
-        <div style={{ background: project.color, padding: '32px 32px 24px', position: 'relative' }}>
+        <div style={{ background: project.color, padding: '20px 24px 16px', position: 'relative' }}>
           <button
             onClick={onClose}
             style={{
               position: 'absolute',
-              top: 16, right: 16,
+              top: 12, right: 12,
               background: 'rgba(0,0,0,0.3)',
               border: 'none',
               color: 'white',
-              width: 32, height: 32,
+              width: 24, height: 24,
               borderRadius: '50%',
               cursor: 'pointer',
-              fontSize: '1.2rem',
+              fontSize: '0.9rem',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
@@ -95,15 +95,15 @@ const ProjectModal = ({ project, onClose }: { project: Project; onClose: () => v
           >
             ×
           </button>
-          <span style={{ fontSize: '0.65rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.7)', fontFamily: 'var(--font-body)' }}>
+          <span style={{ fontSize: '0.55rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.7)', fontFamily: 'var(--font-body)' }}>
             {project.subtitle}
           </span>
-          <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '2.5rem', color: 'white', marginTop: 4 }}>
+          <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '1.8rem', color: 'white', marginTop: 2 }}>
             {project.title}
           </h2>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginTop: 12 }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginTop: 8 }}>
             {project.tags.map(t => (
-              <span key={t} style={{ padding: '4px 10px', background: 'rgba(0,0,0,0.3)', borderRadius: 2, fontSize: '0.72rem', color: 'rgba(255,255,255,0.85)', letterSpacing: '0.05em', fontFamily: 'var(--font-body)' }}>
+              <span key={t} style={{ padding: '3px 8px', background: 'rgba(0,0,0,0.3)', borderRadius: 2, fontSize: '0.6rem', color: 'rgba(255,255,255,0.85)', letterSpacing: '0.05em', fontFamily: 'var(--font-body)' }}>
                 {t}
               </span>
             ))}
@@ -111,23 +111,23 @@ const ProjectModal = ({ project, onClose }: { project: Project; onClose: () => v
         </div>
 
         {/* Modal Body */}
-        <div style={{ padding: '28px 32px 32px', background: 'var(--bg-surface)' }}>
-          <p style={{ color: 'var(--text-secondary)', lineHeight: 1.8, marginBottom: 24, fontSize: '0.95rem' }}>
+        <div style={{ padding: '20px 24px 24px', background: 'var(--bg-surface)' }}>
+          <p style={{ color: 'var(--text-secondary)', lineHeight: 1.7, marginBottom: 20, fontSize: '0.8rem' }}>
             {project.details}
           </p>
-          <div style={{ display: 'flex', gap: 12 }}>
+          <div style={{ display: 'flex', gap: 10 }}>
             <a
               href={project.github}
               target="_blank"
               rel="noopener noreferrer"
               className="rim-glow-subtle"
               style={{
-                padding: '10px 24px',
+                padding: '8px 18px',
                 background: 'var(--naruto-orange)',
                 color: '#08090d',
                 textDecoration: 'none',
                 fontFamily: 'var(--font-display)',
-                fontSize: '0.95rem',
+                fontSize: '0.85rem',
                 letterSpacing: '0.08em',
                 borderRadius: 2,
                 transition: 'transform 0.2s',
@@ -140,12 +140,12 @@ const ProjectModal = ({ project, onClose }: { project: Project; onClose: () => v
             <a
               href={project.link}
               style={{
-                padding: '10px 24px',
+                padding: '8px 18px',
                 border: '1px solid rgba(232,125,43,0.3)',
                 color: 'var(--text-primary)',
                 textDecoration: 'none',
                 fontFamily: 'var(--font-display)',
-                fontSize: '0.95rem',
+                fontSize: '0.85rem',
                 letterSpacing: '0.08em',
                 borderRadius: 2,
                 transition: 'border-color 0.2s',
@@ -219,13 +219,13 @@ const LibrarySection = () => {
       <div className="fog-vignette" style={{ zIndex: 8 }} />
 
       {/* Main content */}
-      <div style={{ position: 'relative', zIndex: 10, maxWidth: 1000, width: '100%', margin: '0 auto' }}>
-        <span className="section-eyebrow">THE LIBRARY</span>
-        <h2 className="section-title" style={{ marginBottom: '2.5rem', fontSize: 'clamp(2rem, 6vw, 7rem)' }}>
+      <div style={{ position: 'relative', zIndex: 10, maxWidth: 800, width: '100%', margin: '0 auto' }}>
+        <span className="section-eyebrow" style={{ fontSize: '0.55rem', letterSpacing: '0.3em' }}>THE LIBRARY</span>
+        <h2 className="section-title" style={{ marginBottom: '1.5rem', fontSize: 'clamp(2rem, 5vw, 4.5rem)' }}>
           ARCHIVED<br />
           <span style={{ color: 'var(--naruto-orange)' }}>PROJECTS</span>
         </h2>
-        <p style={{ color: 'var(--text-secondary)', marginBottom: '3rem', fontSize: '0.9rem' }}>
+        <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem', fontSize: '0.75rem' }}>
           Each volume holds a case study. Select a book to open it.
         </p>
 
@@ -241,16 +241,16 @@ const LibrarySection = () => {
               <div
                 className="book-spine rim-glow-subtle"
                 style={{
-                  width: 60 + i * 10,
-                  height: 180 + (i % 3) * 40,
+                  width: 45 + i * 8,
+                  height: 140 + (i % 3) * 30,
                   background: `linear-gradient(to right, ${BOOK_COLORS[i]} 0%, ${BOOK_COLORS[i]}cc 30%, ${BOOK_COLORS[i]}aa 100%)`,
-                  borderRadius: '2px 6px 6px 2px',
+                  borderRadius: '1px 4px 4px 1px',
                   position: 'relative',
                   overflow: 'hidden',
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'flex-end',
-                  padding: 10,
+                  padding: 8,
                   writingMode: 'vertical-rl',
                   textOrientation: 'mixed',
                 }}
