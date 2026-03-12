@@ -71,16 +71,16 @@ const HeroSection = () => {
           position: 'relative',
           zIndex: 10,
           textAlign: 'left',
-          maxWidth: 900,
+          maxWidth: 600,
         }}
       >
         <h1 className="brutalist-title" style={{ 
           fontFamily: 'var(--font-display)',
-          fontSize: 'clamp(4rem, 12vw, 11rem)',
+          fontSize: 'clamp(2.5rem, 8vw, 6rem)',
           lineHeight: 0.82,
           color: 'var(--text-primary)',
           textTransform: 'uppercase',
-          margin: '20px 0 40px',
+          margin: '12px 0 24px',
           perspective: '1000px',
         }}>
           <span style={{ display: 'block' }}>BUGINGO</span>
@@ -89,27 +89,27 @@ const HeroSection = () => {
 
         <p className="hero-sub" style={{
           color: 'var(--text-secondary)',
-          fontSize: 'clamp(1rem, 1.5vw, 1.25rem)',
-          maxWidth: 550,
-          marginBottom: '3.5rem',
+          fontSize: 'clamp(0.7rem, 1.1vw, 0.9rem)',
+          maxWidth: 400,
+          marginBottom: '2rem',
           lineHeight: 1.6,
           letterSpacing: '0.02em',
         }}>
           Designing immersive digital worlds and high-performance interactive narratives with the modular precision of a ninja.
         </p>
 
-        <div style={{ display: 'flex', gap: 24 }}>
+        <div style={{ display: 'flex', gap: 16 }}>
           <button
             className="hero-cta rim-glow"
             onClick={() => handleJump(0.33)}
             style={{
               background: 'var(--naruto-orange)',
               color: 'var(--bg-void)',
-              padding: '18px 48px',
-              fontSize: '1.2rem',
+              padding: '12px 32px',
+              fontSize: '0.9rem',
               fontWeight: 800,
               border: 'none',
-              borderRadius: 4,
+              borderRadius: 3,
               cursor: 'pointer',
               fontFamily: 'var(--font-display)',
               letterSpacing: '0.15em',
@@ -122,11 +122,11 @@ const HeroSection = () => {
             onClick={() => handleJump(1.0)}
             style={{
               background: 'transparent',
-              border: '2px solid rgba(232,125,43,0.4)',
+              border: '1.5px solid rgba(232,125,43,0.4)',
               color: 'var(--text-primary)',
-              padding: '18px 48px',
-              fontSize: '1.2rem',
-              borderRadius: 4,
+              padding: '12px 32px',
+              fontSize: '0.9rem',
+              borderRadius: 3,
               cursor: 'pointer',
               fontFamily: 'var(--font-display)',
               letterSpacing: '0.15em',
@@ -138,14 +138,14 @@ const HeroSection = () => {
 
         {/* Interaction Hint */}
         <div className="hero-sub" style={{ 
-          marginTop: '5rem', 
+          marginTop: '3.5rem', 
           opacity: 0.5, 
           display: 'flex', 
           alignItems: 'center', 
-          gap: 16 
+          gap: 12 
         }}>
-          <div style={{ width: 60, height: 1, background: 'currentColor' }} />
-          <span style={{ fontSize: '0.65rem', letterSpacing: '0.3em', textTransform: 'uppercase' }}>
+          <div style={{ width: 40, height: 1, background: 'currentColor' }} />
+          <span style={{ fontSize: '0.55rem', letterSpacing: '0.3em', textTransform: 'uppercase' }}>
             SCROLL OR USE ARROWS TO TRAVERSE
           </span>
         </div>
